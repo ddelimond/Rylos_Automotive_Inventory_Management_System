@@ -122,7 +122,7 @@
                         <img
                                 th:if="${tempProduct.imagePath != null}"
                                 th:src="@{'/images/' + ${tempProduct.imagePath}}"
-                                alt="$Product Image"
+                                alt="Product Image"
                                 style="max-width: 80px; max-height: 80px;"/>
                         <span th:if="${tempProduct.imagePath == null}">No Image</span>
                     </td>
