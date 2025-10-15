@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <!--    Linking External CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <title>Rylo's Automotive</title>
+</head>
+<body class="success">
+<nav>
+  <a th:href="@{/mainscreen}">Home</a>
+  <a th:href="@{/about}">About</a>
+  <a th:href="@{/mission}">Mission</a>
+</nav>
+<main id="success">
+    <div class="gifContainer">
+        <img th:src="@{/imgs/TFTF.gif}" alt="car gif">
+    </div>
+  <div>
+    <p>You purchased the item, Thanks for stopping by, Come back soon 🚗💨 😎!</p>
+  </div>
+</main>
+</body>
+</html>

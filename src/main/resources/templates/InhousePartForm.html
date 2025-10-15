@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Part Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <!--    Linking External CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body id="inHousePartForm">
+<nav>
+    <a th:href="@{/mainscreen}">Home</a>
+    <a th:href="@{/about}">About</a>
+    <a th:href="@{/mission}">Mission</a>
+</nav>
+<h1>Inhouse Part Detail</h1>
+
+    <form action="#" th:action="@{/showFormAddInPart}" th:object="${inhousepart}" method="POST" enctype="multipart/form-data">
+
+        <div class="sectionContainer imgAlignment">
+            <div class="imageContainer">
+                <p>
+                    <label>Updated Image:</label>
+                    <img id="output"/>
+                </p>
+
+                <p>
+                    <label>Product Image:</label>
+                    <input type="file" name="imageFile" id="imageFile" accept="image/*" class="form-control mb-4 col-4"/>
+                </p>
+            </div>
+
+            <div>
+                <p th:if="${inhousepart.imagePath != null}">
+                    <label>Current Image:</label>
+                    <img th:src="@{'/images/' + ${inhousepart.imagePath}}" alt="Product Image"/>
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="sectionContainer">
+
+            <p><input type="hidden" th:field="*{id}"/></p>
+
+            <p><input type="text"  th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/></p>
+
+            <p><input type="text" path="price" th:field="*{price}" placeholder="Price" class="form-control mb-4 col-4"/></p>
+            <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
+
+            <p><input type="text" path="inv" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
+            <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
+
+            <p><input type="text" path="minInv" th:field="*{minInv}" placeholder="Minimum Inventory" class="form-control mb-4 col-4"/></p>
+            <p th:if="${#fields.hasErrors('minInv')}" th:errors="*{minInv}">Minimum Inventory Error</p>
+
+            <p><input type="text" path="maxInv" th:field="*{maxInv}" placeholder="Maximum Inventory" class="form-control mb-4 col-4"/></p>
+            <p th:if="${#fields.hasErrors('maxInv')}" th:errors="*{maxInv}">Maximum Inventory Error</p>
+
+            <p><input type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4"/></p>
+
+            <div th:if="${#fields.hasAnyErrors()}">
+                <ul>
+                    <li th:each="err: ${#fields.allErrors()}" th:text="${err}"></li>
+                </ul>
+            </div>
+
+            <p><input type="submit" value="Submit" /></p>
+        </div>
+
+</form>
+<p><errors path="price" cssClass=""error/><p>
+
+    <script th:src="@{/js/app.js}"></script>
+</body>
+
+</html>

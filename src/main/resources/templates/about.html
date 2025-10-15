@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rylo's Automotive</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+  <!--    Linking External CSS -->
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<nav>
+  <a th:href="@{/mainscreen}">Home</a>
+  <a th:href="@{/about}">About</a>
+  <a th:href="@{/mission}">Mission</a>
+</nav>
+<main id="about">
+  <h1 class="aboutUs">About Us</h1>
+  <hr>
+  <br>
+  <h3>Rylo's Story: From Dream Chaser to Columbus Entrepreneur</h3>
+
+  <div class="decorationBorder">
+    <div class="dualContainer">
+      <div>
+        <img th:src="@{/imgs/Rylo_Dale.png}" alt="Dale and Rylo">
+      </div>
+      <p>Rylo Martinez grew up in the Clintonville neighborhood of Columbus, Ohio, where his love affair with automobiles began in his grandfather's cramped garage. Every Saturday morning, young Rylo would watch Papa Luis restore classic Chevrolets, the smell of motor oil and metal polish becoming the scent of possibility itself. His grandfather, an immigrant from Mexico who'd driven Route 66 in a beat-up Impala to start a new life, taught him that cars weren't just machines—they were freedom on four wheels.</p>
+    </div>
+    <p>After studying automotive technology at Columbus State Community College, Rylo spent seven years working at various dealerships and chain repair shops around the city. He was good at the work—exceptional, even—but something always felt hollow. The corporate policies, the upselling pressure, the way customers were treated like transaction numbers rather than people with places to go and memories to make. </p>
+    <div class="secDualContainer">
+      <p>The turning point came during a cross-country drive to Seattle when he was twenty-eight. Somewhere in South Dakota, his truck broke down in a small town at sunset. A gruff mechanic named Dale kept his shop open two hours past closing, refused to overcharge him, and sent him off with a handshake and directions to a good diner. "We take care of travelers here," Dale said simply. "You never know whose journey you're saving." That night, pulled over at a rest stop under impossible stars, Rylo made his decision. He'd open his own shop—a place where honesty, expertise, and genuine care for people's journeys came first.</p>
+      <div>
+        <img th:src="@{/imgs/rylos_shop.jpg}" alt="picture of shop">
+      </div>
+    </div>
+
+    <p>It took three years of saving every dollar, planning every detail, and convincing the bank that his vision was worth the risk. But in the spring of 2021, Rylo's Automotive opened its doors on a corner lot in the Linden neighborhood, a working-class area that reminded him of his grandfather's spirit—resilient, unpretentious, and full of heart.</p>
+  </div>
+</main>
+
+</body>
+</html>
