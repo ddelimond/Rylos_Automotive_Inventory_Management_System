@@ -186,11 +186,7 @@ Open your browser and navigate to: `http://localhost:8080`
 
 ### Default Data
 
-The application automatically loads sample inventory data on first run:
-
-* 5 Parts: Alternators, Batteries, Engines, Brakes, Transmissions
-* 5 Products: Complete automotive systems with associated parts
-* Each part initialized with min (1) and max (50) inventory values
+The application automatically loads sample inventory data on first run
 
 ---
 
@@ -310,23 +306,6 @@ mvn clean package
 
 ---
 
-## ⚠️ Database Note
-
-**Important:** This application currently uses H2 embedded database for demonstration purposes. H2 is suitable for development and testing but **not recommended for production use** due to:
-
-* Data loss on application restart
-* No horizontal scaling support
-* Limited concurrent access handling
-* No backup/recovery mechanisms
-
-**For production deployment, consider migrating to:**
-
-* Amazon RDS (MySQL/PostgreSQL)
-* Amazon Aurora
-* Other production-grade relational databases
-
----
-
 ## 🤝 Contributing
 
 This project was developed as part of academic coursework. While not actively accepting contributions, feel free to fork the repository for educational purposes.
@@ -341,7 +320,7 @@ This project is part of academic coursework for Western Governors University's J
 
 ## 👨‍💻 Developer
 
-**Daniel Delimond**
+**Darren Delimond**
 
 * GitHub: [@ddelimond](https://github.com/ddelimond)
 * Project Repository: [Rylos Automotive Inventory Management System](https://github.com/ddelimond/Rylos_Automotive_Inventory_Management_System)
